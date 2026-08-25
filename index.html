@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banggai Wonderland | Discover Hidden Paradise of Banggai</title>
+    <meta name="description" content="Explore the hidden paradise of Luwuk and Banggai Islands — crystal-clear lakes, waterfalls, tropical beaches, islands and unforgettable local experiences.">
+    <link rel="icon" id="favicon" type="image/png" href="images/favicon/favicon.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+    <!-- Data & Config -->
+    <script src="js/images.js"></script>
+    <script src="js/translations.js"></script>
+    <script src="js/destinations.js"></script>
+    <script src="js/packages.js"></script>
+    <script src="js/hotels.js"></script>
+    <script src="js/gallery.js"></script>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo">
+                <img data-img="logo" alt="Banggai Wonderland Logo">
+            </a>
+            <button class="mobile-menu-btn" id="mobile-menu-btn">☰</button>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#destinations" data-i18n="navDestinations">Destinations</a>
+                <a href="#packages" data-i18n="navPackages">Packages</a>
+                <a href="#experiences" data-i18n="navExperiences">Experiences</a>
+                <a href="#hotels" data-i18n="navHotels">Hotels</a>
+                <a href="#faq" data-i18n="navFAQ">FAQ</a>
+                <div class="lang-selector">
+                    <select id="lang-select">
+                        <option value="en">🇬🇧 EN</option>
+                        <option value="id">🇮🇩 ID</option>
+                        <option value="es">🇪🇸 ES</option>
+                        <option value="zh">🇨🇳 中文</option>
+                        <option value="fr">🇫🇷 FR</option>
+                    </select>
+                </div>
+                <a href="#booking" class="btn btn-nav" data-i18n="navBook">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" data-img="hero" id="home">
+        <div class="container hero-content">
+            <h1 data-i18n="heroTitle">Discover Hidden Paradise of Banggai</h1>
+            <p data-i18n="heroSubtitle">Explore crystal-clear lakes, hidden beaches, tropical islands and untouched waterfalls across Luwuk and Banggai.</p>
+            <div class="hero-btns">
+                <a href="#destinations" class="btn" data-i18n="btnExplore">Explore Destinations</a>
+                <a href="#booking" class="btn btn-outline" data-i18n="btnPlan">Plan Your Journey</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinations -->
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <h2 class="section-title" data-i18n="secDestinations">Explore Destinations</h2>
+            <div class="filters">
+                <button class="filter-btn active" onclick="filterDestinations('all', this)" data-i18n="filterAll">All</button>
+                <button class="filter-btn" onclick="filterDestinations('waterfalls', this)" data-i18n="filterWaterfalls">Waterfalls</button>
+                <button class="filter-btn" onclick="filterDestinations('beaches', this)" data-i18n="filterBeaches">Beaches</button>
+                <button class="filter-btn" onclick="filterDestinations('lakes', this)" data-i18n="filterLakes">Lakes & Lagoons</button>
+                <button class="filter-btn" onclick="filterDestinations('islands', this)" data-i18n="filterIslands">Islands</button>
+                <button class="filter-btn" onclick="filterDestinations('adventure', this)" data-i18n="filterAdventure">Nature & Adventure</button>
+            </div>
+            <div class="grid" id="destinations-grid">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages -->
+    <section id="packages" class="packages">
+        <div class="container">
+            <h2 class="section-title" data-i18n="secPackages">Trip Packages</h2>
+            <div class="grid" id="packages-grid">
+                <!-- Dynamically populated via JS -->
+            </div>
+            <p class="ferry-warning" data-i18n="ferryWarning">Ferry schedules may vary depending on weather and operational conditions.</p>
+        </div>
+    </section>
+
+    <!-- Experiences -->
+    <section id="experiences" class="experiences">
+        <div class="container">
+            <h2 class="section-title" data-i18n="secExperiences">Experiences</h2>
+            <div class="exp-grid">
+                <div class="exp-item">
+                    <h3 data-i18n="expWaterfall">Waterfall Adventure</h3>
+                    <p data-i18n="expWaterfallDesc">Discover hidden tropical waterfalls.</p>
+                </div>
+                <div class="exp-item">
+                    <h3 data-i18n="expLakes">Crystal Clear Lakes</h3>
+                    <p data-i18n="expLakesDesc">Explore the famous clear-water lakes of Banggai.</p>
+                </div>
+                <div class="exp-item">
+                    <h3 data-i18n="expIslands">Island Hopping</h3>
+                    <p data-i18n="expIslandsDesc">Visit remote beaches and tropical islands.</p>
+                </div>
+                <div class="exp-item">
+                    <h3 data-i18n="expSnorkeling">Snorkeling</h3>
+                    <p data-i18n="expSnorkelingDesc">Explore the underwater world.</p>
+                </div>
+                <div class="exp-item">
+                    <h3 data-i18n="expJellyfish">Jellyfish Experience</h3>
+                    <p data-i18n="expJellyfishDesc">Experience the unique marine environment around Mbuang-Mbuang.</p>
+                </div>
+                <div class="exp-item">
+                    <h3 data-i18n="expLocal">Local Experience</h3>
+                    <p data-i18n="expLocalDesc">Meet local communities and experience Banggai culture.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hotels -->
+    <section id="hotels" class="hotels">
+        <div class="container">
+            <h2 class="section-title" data-i18n="secHotels">Stay in Comfort</h2>
+            <div class="grid" id="hotels-grid">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Dynamically populated via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title" data-i18n="secAboutTitle">Why Banggai Wonderland?</h2>
+            <p data-i18n="secAboutDesc">Banggai Wonderland is created to introduce the hidden natural beauty of Luwuk, Banggai and Banggai Islands to travelers from around the world.</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2 class="section-title" data-i18n="secFAQ">Frequently Asked Questions</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Is Banggai suitable for foreign travelers?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes, while more remote than Bali, it offers an untouched experience. Basic English is spoken by guides, and our packages make navigation easy.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>How do I travel from Luwuk to Salakan?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We use the daily public ferry or speedboats, taking approximately 2-3 hours depending on the vessel and weather conditions.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Can I customize the trip?</span>
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Absolutely. Let us know your preferred destinations in the booking form under "Special Requests".</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <div class="booking-form">
+                <h2 class="section-title" data-i18n="secBooking">Plan Your Banggai Journey</h2>
+                <form id="booking-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-i18n="formName">Full Name</label>
+                            <input type="text" id="book-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="formCountry">Country</label>
+                            <input type="text" id="book-country">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-i18n="formWhatsApp">WhatsApp Number</label>
+                            <input type="tel" id="book-wa" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="formEmail">Email (Optional)</label>
+                            <input type="email" id="book-email">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-i18n="formTravelers">Number of Travelers</label>
+                            <input type="number" id="book-travelers" min="1" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Send Request via</label>
+                            <select id="book-wa-target">
+                                <option value="1">WhatsApp 1</option>
+                                <option value="2">WhatsApp 2</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-i18n="formArrival">Arrival Date</label>
+                            <input type="date" id="book-arrival" required>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="formArrivalTime">Arrival Time</label>
+                            <input type="time" id="book-arrival-time">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-i18n="formDeparture">Departure Date</label>
+                            <input type="date" id="book-departure">
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="formPackage">Trip Package</label>
+                            <select id="book-package" required></select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label data-i18n="formFerry">Preferred Ferry</label>
+                            <select id="book-ferry">
+                                <option value="">Flexible</option>
+                                <option value="14:00">14:00</option>
+                                <option value="16:00">16:00</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label data-i18n="formHotel">Preferred Hotel</label>
+                            <select id="book-hotel"></select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label data-i18n="formActivities">Destinations / Activities</label>
+                            <input type="text" id="book-activities">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group full">
+                            <label data-i18n="formSpecial">Special Request</label>
+                            <textarea id="book-special" rows="3"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-submit" data-i18n="btnSubmit">Send Booking Request</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <img data-img="logo" alt="Banggai Wonderland">
+            <h3 data-i18n="footerDesc" style="color: white; margin-bottom: 1rem;">Discover Hidden Paradise of Banggai</h3>
+            <p data-i18n="footerLocation">Luwuk, Banggai Regency, Central Sulawesi, Indonesia</p>
+            <p>WhatsApp: +62 857 1404 6285 | +62 822 1632 5030</p>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Banggai Wonderland. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/booking.js"></script>
+</body>
+</html>
